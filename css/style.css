@@ -277,7 +277,7 @@ body {
     background-size: 20px 20px;
 }
 
-.indication {
+.scroll {
     position: fixed;
     left: 50%;
     bottom: 40px;
@@ -294,7 +294,7 @@ body {
     z-index: 100
 }
 
-.indication .dot {
+.scroll .dot {
     position: absolute;
     left: 50%;
     width: 8px;
@@ -307,11 +307,11 @@ body {
     animation: wheelMove 1.6s ease-in-out infinite;
 }
 
-.indication.dark {
+.scroll.dark {
     border: 3px solid #53787d;
 }
 
-.indication.dark .dot {
+.scroll.dark .dot {
     background-color: #53787d;
 }
 
