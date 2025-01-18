@@ -110,20 +110,6 @@ body {
     }
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 20% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 20%;
-    }
-}
-
 .logo {
     position: fixed;
     top: 50%;
@@ -479,13 +465,30 @@ body {
 }
 
 .features-profile__img {
+    position: relative;
     max-width: 420px;
     height: 446px;
     margin-left: 50px;
+    z-index: 20;
+}
+
+.features-profile__img:before {
+    position: absolute;
+    top: -8px;
+    left: -32px;
+    width: 420px;
+    height: 446px;
+    background-color: #53787d;
+    border-radius: 50%;
+    z-index: 10;
+    content: "";
 }
 
 .features-profile__img>img {
+    position: relative;
     width: 100%;
     height: 100%;
+    border: 3px solid #eee7da;
     border-radius: 50%;
+    z-index: 20;
 }
