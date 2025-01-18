@@ -8,7 +8,7 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #eee7da;
+    background-color: #2b3e41;
     font-family: 'Spoqa Han Sans Neo', sans-serif;
     font-weight: 300;
     -webkit-user-select: none;
@@ -226,6 +226,8 @@ body {
 }
 
 .arrow {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 50%;
     right: 40px;
@@ -237,7 +239,6 @@ body {
 }
 
 .arrow>button {
-    display: block;
     width: 46px;
     height: 46px;
     margin: 0 auto;
@@ -315,6 +316,17 @@ body {
     background-color: #53787d;
 }
 
+.bg-point {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 68%;
+    height: 140%;
+    background-color: #eee7da;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
 /* COMMON */
 .container {
     /* display: none; */
@@ -336,17 +348,27 @@ body {
 .container .features>.feature {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 50px);
-    margin-top: 50px;
+    height: 100%;
     touch-action: none;
 }
 
 /* Profile */
-.features-profile .features-common_inner {
+.features-profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 190px;
+}
+
+.features-profile .features-common_inner {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 580px;
+    padding: 0 50px;
+    background-color: #eee7da;
+    box-shadow: 18px 6px 30px -11px #9b9b9b;
+    border-radius: 65px;
 }
 
 .features-profile__info {
@@ -443,29 +465,13 @@ body {
 }
 
 .features-profile__img {
-    position: relative;
     max-width: 420px;
     height: 446px;
-    margin-left: 100px;
-}
-
-.features-profile__img:before {
-    position: absolute;
-    top: -75px;
-    left: -96px;
-    width: 420px;
-    height: 446px;
-    border-radius: 35%;
-    background-color: #53787d;
-    z-index: 1;
-    content: "";
+    margin-left: 50px;
 }
 
 .features-profile__img>img {
-    position: relative;
     width: 100%;
     height: 100%;
-    border: 8px solid #eee7da;
-    border-radius: 35%;
-    z-index: 10;
+    border-radius: 50%;
 }

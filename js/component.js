@@ -12,10 +12,13 @@
         };
 
         const setElements = function () {
+            // bg
+            els.bg = document.querySelector('.bg-point');
+            
             // section
             els.sectionWrap = document.querySelector('.features');
             els.section = document.querySelectorAll('.feature');
-            
+
             // scroll
             els.scroll = document.querySelector('.scroll');
 
@@ -92,7 +95,9 @@
                 clearTimeout(els.wheelTimer);
                 if (els.pageNow == 0) {
                     els.sectionWrap.style.transition = 'none';
+                    els.bg.classList.add('bg_show');
                 } else {
+                    els.bg.classList.remove('bg_show');
                     els.sectionWrap.style.transition = 'top 0.7s ease-in-out';
                 }
 
