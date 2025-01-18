@@ -42,11 +42,21 @@ body {
 
 @keyframes background_show {
     0% {
-        transform: translateX(80%);
+        transform: translateX(68%);
     }
 
     100% {
         transform: translateX(0%);
+    }
+}
+
+@keyframes background_hide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
     }
 }
 
@@ -112,10 +122,6 @@ body {
     100% {
         background-position: 0% 20%;
     }
-}
-
-.bg_show {
-    animation: background_show 1.8s forwards;
 }
 
 .logo {
@@ -325,6 +331,14 @@ body {
     background-color: #eee7da;
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
+}
+
+.bg_show {
+    animation: background_show 1.8s forwards;
+}
+
+.bg_hide {
+    animation: background_hide 1.2s forwards;
 }
 
 /* COMMON */

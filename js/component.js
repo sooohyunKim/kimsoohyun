@@ -95,10 +95,16 @@
                 clearTimeout(els.wheelTimer);
                 if (els.pageNow == 0) {
                     els.sectionWrap.style.transition = 'none';
-                    els.bg.classList.add('bg_show');
+                } else {
+                    els.sectionWrap.style.transition = 'top 0.7s ease-in-out';
+                }
+
+                if (n == 1 || n == 2) {
+                    if (!els.bg.classList.contains('bg_show')) els.bg.classList.add('bg_show');
+                    if (els.bg.classList.contains('bg_hide')) els.bg.classList.remove('bg_hide');
                 } else {
                     els.bg.classList.remove('bg_show');
-                    els.sectionWrap.style.transition = 'top 0.7s ease-in-out';
+                    els.bg.classList.add('bg_hide');
                 }
 
                 if (n == els.numPage) {
