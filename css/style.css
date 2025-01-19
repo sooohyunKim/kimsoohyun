@@ -682,3 +682,11 @@ body {
 .features-contact__detail-phone {
     margin-top: 40px;
 }
+
+/* TABLET */
+@media screen and (max-width:1366px) {}
+
+@media screen and (max-width:1024px) {}
+
+/* MOBILE */
+@media screen and (max-width:767px) {}
