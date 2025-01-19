@@ -597,3 +597,48 @@ body {
 .features-experience__detail-info {
     font-size: 18px;
 }
+
+/* contact */
+.features-contact .features-common_inner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    color: #eee7da;
+    box-shadow: 0px 3px 25px -5px #000;
+    border-radius: 40px;
+}
+
+.features-contact__detail-headline {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.features-contact__detail>div+div {
+    margin-top: 30px;
+}
+
+.features-contact__detail-item {
+    position: relative;
+    font-size: 24px;
+}
+
+.features-contact__detail-item:before {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: #fcce77;
+    border-radius: 2px;
+    content: "";
+}
+
+.features-contact__detail-item>p+p {
+    margin-top: 30px;
+}
+
+.features-contact__detail-phone {
+    margin-top: 40px;
+}
