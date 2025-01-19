@@ -15,6 +15,9 @@
             // cursor
             els.cursor = document.querySelector('.cursor');
 
+            // container
+            els.container = document.querySelector('.container');
+
             // bg
             els.bg = document.querySelector('.bg-point');
 
@@ -174,8 +177,11 @@
 
         const eventHandler = {
             load: function () {
-                eventList.setPage();
-                eventList.setHeight();
+                window.addEventListener('load', function () {
+                    eventList.setPage();
+                    eventList.setHeight();
+                    els.container.classList.add('on');
+                });
             },
             mouseMove: function () {
                 window.addEventListener('mousemove', eventList.mouseMove);
