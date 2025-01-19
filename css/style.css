@@ -236,7 +236,6 @@ body {
 .arrow>button {
     width: 46px;
     height: 46px;
-    margin: 0 auto;
     background: transparent;
     line-height: 46px;
     text-align: center;
@@ -684,7 +683,35 @@ body {
 }
 
 /* TABLET */
-@media screen and (max-width:1366px) {}
+@media screen and (max-width:1366px) {
+    * {
+        cursor: default;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .cursor {
+        display: none;
+    }
+
+    .arrow {
+        flex-direction: row;
+        top: initial;
+        left: 50%;
+        bottom: 50px;
+        width: 120px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .arrow>button+button {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+}
 
 @media screen and (max-width:1024px) {}
 
