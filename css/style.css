@@ -1,4 +1,7 @@
 /* 2025 SOOHYUN PORTFOLIO */
+* {
+    cursor: none;
+}
 
 html {
     overscroll-behavior: contain;
@@ -172,7 +175,7 @@ body {
 }
 
 .header .menu_bx {
-    float: right
+    float: right;
 }
 
 .header .menu_bx:after {
@@ -320,11 +323,40 @@ body {
 }
 
 .bg_show {
-    animation: background_show 1.8s forwards;
+    animation: background_show 1.2s forwards;
 }
 
 .bg_hide {
-    animation: background_hide 1.2s forwards;
+    animation: background_hide 0.6s forwards;
+}
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #70b991;
+    opacity: 0.6;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.cursor.active {
+    opacity: 0.8;
+}
+
+.cursor.active .ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #53787d;
+    border-radius: 50%;
+    animation: ping 1s ease-out infinite;
 }
 
 /* COMMON */
@@ -542,6 +574,8 @@ body {
     background-color: #2b3e41;
     border-radius: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     content: "";
 }
 
@@ -605,6 +639,8 @@ body {
     left: 50%;
     padding: 50px;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     color: #eee7da;
     box-shadow: 0px 3px 25px -5px #000;
     border-radius: 40px;

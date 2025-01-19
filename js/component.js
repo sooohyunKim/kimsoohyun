@@ -2,7 +2,7 @@
 (function () {
     window.portfolio = window.portfolio || {};
 
-    window.portfolio.parallax = function () {
+    window.portfolio.motion = function () {
         let els = {};
         let isWheelBlocked = false;
 
@@ -12,9 +12,12 @@
         };
 
         const setElements = function () {
+            // cursor
+            els.cursor = document.querySelector('.cursor');
+
             // bg
             els.bg = document.querySelector('.bg-point');
-            
+
             // section
             els.sectionWrap = document.querySelector('.features');
             els.section = document.querySelectorAll('.feature');
@@ -42,12 +45,18 @@
             els.pageNext = 0;
             els.wheelDirection = 0;
             els.wheelTimer = '';
+
+            // clickable els
+            allClickableArray = [els.arrowPrev, els.arrowNext, els.menuButtons[0], els.menuButtons[1], els.menuButtons[2], els.workList[0], els.workList[1], els.workList[2]];
         };
 
         const bindEvents = function () {
             eventHandler.load();
             eventHandler.resize();
             eventHandler.scroll();
+            eventHandler.mouseMove();
+            eventHandler.mouseOver();
+            eventHandler.mouseLeave();
             eventHandler.arrowClick();
             eventHandler.menuClick();
             eventHandler.workListClick();
@@ -55,13 +64,16 @@
 
         const eventList = {
             mouseMove: function (e) {
-
+                let x = e.clientX;
+                let y = e.clientY;
+                els.cursor.style.left =  x + 'px';
+                els.cursor.style.top = y + 'px';
             },
-            mouseOver: function (e) {
-
+            mouseOver: function () {
+                els.cursor.classList.add('active');
             },
-            mouseLeave: function (e) {
-
+            mouseLeave: function () {
+                els.cursor.classList.remove('active');
             },
             setPage: function () {
                 for (let i = 0; i < els.numPage; i++) {
@@ -125,6 +137,9 @@
                 els.pageNow = n;
                 els.pagePrev = (n - 1) < 1 ? 1 : n - 1;
                 els.pageNext = (n + 1) > els.numPage ? els.numPage : n + 1;
+
+                els.menuButtons[n-1].parentElement.querySelector('.on').classList.remove('on');
+                els.menuButtons[n-1].classList.add('on');
             },
             setHeight: function () {
                 let windowHeight = window.innerHeight;
@@ -158,7 +173,7 @@
         };
 
         const eventHandler = {
-            load: function (){
+            load: function () {
                 eventList.setPage();
                 eventList.setHeight();
             },
@@ -166,10 +181,14 @@
                 window.addEventListener('mousemove', eventList.mouseMove);
             },
             mouseOver: function () {
-                allClickable.addEventListener('mouseover', eventList.mouseOver);
+                for (let i = 0; i < allClickableArray.length; i++) {
+                    allClickableArray[i].addEventListener('mouseover', eventList.mouseOver);
+                }
             },
             mouseLeave: function () {
-                allClickable.addEventListener('mouseLeave', eventList.mouseLeave);
+                for (let i = 0; i < allClickableArray.length; i++) {
+                    allClickableArray[i].addEventListener('mouseleave', eventList.mouseLeave);
+                }
             },
             scroll: function () {
                 window.addEventListener('wheel', eventList.scroll);
