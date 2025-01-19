@@ -367,7 +367,7 @@ body {
     height: 580px;
     padding: 0 50px;
     background-color: #eee7da;
-    box-shadow: 18px 6px 30px -11px #9b9b9b;
+    box-shadow: 4px 6px 30px -15px #000;
     border-radius: 65px;
 }
 
@@ -520,7 +520,7 @@ body {
     background-color: #eee7da;
     color: #2b3e41;
     border-radius: 20px;
-    box-shadow: 10px 3px 33px -19px #2b3e41;
+    box-shadow: 4px 6px 30px -15px #000;
     transition: 0.3s ease-in;
 }
 
