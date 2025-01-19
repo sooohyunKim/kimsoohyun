@@ -29,6 +29,12 @@
             // menu
             els.menuButtons = document.querySelectorAll('.menu');
 
+            // workList
+            els.workListWrap = document.querySelector('.features-experience__list-wrap');
+            els.workList = els.workListWrap.querySelectorAll('.features-experience__list');
+            els.workListDetailWrap = document.querySelector('.features-experience__detail-wrap');
+            els.workListDetail = els.workListDetailWrap.querySelectorAll('.features-experience__detail');
+
             // wheelEvent variable
             els.numPage = els.section.length;
             els.pageNow = 0;
@@ -44,6 +50,7 @@
             eventHandler.scroll();
             eventHandler.arrowClick();
             eventHandler.menuClick();
+            eventHandler.workListClick();
         };
 
         const eventList = {
@@ -142,6 +149,12 @@
             menuClick: function () {
                 eventList.showPage(this.index);
             },
+            workListClick: function () {
+                els.workListWrap.querySelector('.on').classList.remove('on');
+                this.classList.add('on');
+                els.workListDetailWrap.querySelector('.on').classList.remove('on');
+                els.workListDetail[this.index].classList.add('on');
+            }
         };
 
         const eventHandler = {
@@ -172,6 +185,12 @@
                 for (let i = 0; i < els.menuButtons.length; i++) {
                     els.menuButtons[i].index = i + 1;
                     els.menuButtons[i].addEventListener('click', eventList.menuClick);
+                }
+            },
+            workListClick: function () {
+                for (let i = 0; i < els.workList.length; i++) {
+                    els.workList[i].index = i;
+                    els.workList[i].addEventListener('click', eventList.workListClick);
                 }
             }
         };

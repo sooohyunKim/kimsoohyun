@@ -492,3 +492,108 @@ body {
     border-radius: 50%;
     z-index: 20;
 }
+
+/* work exprience */
+.features-experience {
+    display: flex;
+    justify-content: center;
+}
+.features-experience .features-common_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 80px 100px 80px;
+}
+
+.features-experience__list-wrap {
+    width: calc(38% - 50px);
+    border-right: 2px solid #2b3e41;
+    padding-right: 50px;
+}
+
+.features-experience__list {
+    position: relative;
+    width: calc(100% - 50px);
+    max-width: 600px;
+    padding: 20px;
+    background-color: #eee7da;
+    color: #2b3e41;
+    border-radius: 20px;
+    box-shadow: 10px 3px 33px -19px #2b3e41;
+    transition: 0.3s ease-in;
+}
+
+.features-experience__list.on {
+    background-color: #53787d;
+    color: #eee7da;
+}
+
+.features-experience__list+.features-experience__list {
+    margin-top: 50px;
+}
+
+.features-experience__list:before {
+    position: absolute;
+    top: 50%;
+    right: -75px;
+    width: 30px;
+    height: 30px;
+    background-color: #2b3e41;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    content: "";
+}
+
+.features-experience__list>p+p {
+    margin-top: 20px;
+}
+
+.features-experience__list-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.features-experience__list-info {
+    font-size: 18px;
+}
+
+.features-experience__detail>div+div {
+    margin-top: 50px;
+}
+
+.features-experience__detail-wrap {
+    position: relative;
+    max-width: 800px;
+    width: calc(62% - 100px);
+    height: 100%;
+    margin-left: 100px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.features-experience__detail {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    color: #2b3e41;
+    opacity: 0;
+    transition: 0.4s ease-in;
+}
+
+.features-experience__detail.on {
+    opacity: 1;
+}
+
+.features-experience__detail-title>p+p {
+    margin-top: 20px;
+}
+
+.features-experience__detail-title-headline {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.features-experience__detail-info {
+    font-size: 18px;
+}
