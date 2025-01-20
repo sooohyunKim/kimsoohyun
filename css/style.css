@@ -32,6 +32,17 @@ body {
     }
 }
 
+@keyframes logo_mo {
+    to {
+        top: 20px;
+        left: 25px;
+        font-size: 14px;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
 @keyframes fadeIn {
     0% {
         text-shadow: 5px 0px 0px rgba(112, 185, 145, 0.65);
@@ -774,6 +785,10 @@ body {
         margin-left: 15px;
     }
 
+    .container .features {
+        width: 100%;
+    }
+
     /* profile */
     .features-profile .features-common_inner {
         height: 500px;
@@ -817,11 +832,22 @@ body {
     }
 
     .features-profile__info {
-        font-size: 45px;
+        font-size: 42px;
+    }
+
+    .features-profile__info>div+div {
+        margin-top: 28px;
     }
 
     .features-profile__info .tag_list {
-        width: 530px;
+        width: 500px;
+        margin-top: 28px;
+    }
+
+    .features-profile__info .tag_list .tag {
+        width: 115px;
+        height: 36px;
+        line-height: 32px;
     }
 
     .features-profile__img {
@@ -837,39 +863,9 @@ body {
 
 /* MOBILE */
 @media screen and (max-width:767px) {
-    .bg-point {
-        right: -180px;
-        width: 170%;
-        height: 58%;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
-    }
-
-    .bg_show {
-        animation: background_show_mo 0.8s forwards
-    }
-
-    .bg_hide {
-        animation: background_hide_mo 0.5s forwards;
-    }
-
     .logo {
-        font-size: 30px;
-        animation: fadeOut .4s ease-out forwards;
-        animation-delay: 1.2s;
-    }
-
-    .header {
-        width: 100%;
-        padding: 0;
-    }
-
-    .header .menu_bx {
-        float: none;
-        width: 320px;
-        margin: 0 auto;
+        font-size: 16px;
+        animation: logo_mo .5s ease-in-out forwards;
     }
 
     .header .menu_bx .menu {
@@ -943,7 +939,48 @@ body {
     }
 }
 
+@media screen and (max-width:440px) {
+    .logo {
+        display: none;
+    }
+}
+
 @media screen and (max-width:400px) {
+    .bg-point {
+        right: -180px;
+        width: 170%;
+        height: 58%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .bg_show {
+        animation: background_show_mo 0.8s forwards
+    }
+
+    .bg_hide {
+        animation: background_hide_mo 0.5s forwards;
+    }
+
+    .logo {
+        font-size: 30px;
+        animation: fadeOut .4s ease-out forwards;
+        animation-delay: 1.2s;
+    }
+
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header .menu_bx {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Profile */
     .features-profile__info .sub_txt {
         font-size: 11px;
     }
