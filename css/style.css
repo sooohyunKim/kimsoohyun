@@ -1,7 +1,7 @@
 /* 2025 SOOHYUN PORTFOLIO */
-/* * {
+* {
     cursor: none;
-} */
+}
 
 html {
     overscroll-behavior: contain;
@@ -66,7 +66,7 @@ body {
 
 @keyframes background_show_mo {
     0% {
-        transform: translateY(-58%);
+        transform: translateY(-78%);
     }
 
     100% {
@@ -618,7 +618,7 @@ body {
 
 .features-experience__detail {
     position: absolute;
-    top: 150px;
+    top: 50%;
     right: 0;
     width: 100%;
     color: #2b3e41;
@@ -626,6 +626,9 @@ body {
     visibility: hidden;
     transition: 0.4s ease-in;
     word-break: keep-all;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .features-experience__detail.on {
@@ -712,8 +715,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 335px;
     padding: 50px;
-    min-width: 210px;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -833,32 +836,33 @@ body {
     }
 
     .features-profile__info {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .features-profile__info>div+div {
-        margin-top: 28px;
+        margin-top: 20px;
     }
 
     .features-profile__info .tag_list {
         width: 500px;
-        margin-top: 28px;
+        margin-top: 20px;
     }
 
     .features-profile__info .tag_list .tag {
         width: 115px;
         height: 36px;
         line-height: 32px;
+        font-size: 14px;
     }
 
     .features-profile__img {
-        width: 260px;
-        height: 276px;
+        width: 240px;
+        height: 256px;
     }
 
     .features-profile__img:before {
-        width: 260px;
-        height: 276px;
+        width: 240px;
+        height: 256px;
     }
 }
 
@@ -941,8 +945,13 @@ body {
     }
 
     /* Work Experience */
+    .features-experience .features-common_inner {
+        padding: 60px 10px 100px 10px;
+    }
+
     .features-experience__list-wrap {
         width: auto;
+        padding-right: 35px;
     }
 
     .features-experience__list {
@@ -952,7 +961,7 @@ body {
     .features-experience__list:before {
         width: 15px;
         height: 15px;
-        right: -59px;
+        right: -44px;
     }
 
     .features-experience__list>p+p {
@@ -985,6 +994,19 @@ body {
         font-size: 22px;
     }
 
+    .features-experience__detail-title-headline>a {
+        width: 20px;
+        height: 20px;
+    }
+
+    .features-experience__detail-title-headline>a:before {
+        top: -7px;
+        right: -3px;
+        width: 13px;
+        height: 15px;
+        font-size: 16px;
+    }
+
     .features-experience__detail-info {
         font-size: 15px;
     }
@@ -1002,6 +1024,10 @@ body {
     }
 
     /* Contact */
+    .features-contact .features-common_inner {
+        width: 210px;
+    }
+
     .features-contact__detail-headline {
         font-size: 30px;
     }
@@ -1016,20 +1042,13 @@ body {
     }
 }
 
-@media screen and (max-width:440px) {
-    .logo {
-        display: none;
-    }
-}
-
-@media screen and (max-width:400px) {
+@media screen and (max-width:500px) {
     .bg-point {
-        right: -180px;
-        width: 170%;
-        height: 58%;
+        right: -236px;
+        width: 200%;
+        height: 78%;
         border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 50%;
+        border-bottom-left-radius: 46%;
         border-bottom-right-radius: 50%;
     }
 
@@ -1041,20 +1060,14 @@ body {
         animation: background_hide_mo 0.5s forwards;
     }
 
-    .logo {
-        font-size: 30px;
-        animation: fadeOut .4s ease-out forwards;
-        animation-delay: 1.2s;
-    }
-
     .header {
         width: 100%;
         padding: 0;
     }
 
     .header .menu_bx {
-        width: 320px;
-        margin: 0 auto;
+        width: auto;
+        right: 20px;
     }
 
     /* Profile */
@@ -1070,8 +1083,101 @@ body {
         font-size: 11px;
     }
 
+    /* Work Experience */
+    .features-experience .features-common_inner {
+        flex-direction: column-reverse;
+    }
+
+    .features-experience__list-wrap {
+        display: flex;
+        padding-right: 0;
+    }
+
+    .features-experience__list {
+        width: auto;
+        border-right: none;
+        padding: 10px;
+    }
+
+    .features-experience__list+.features-experience__list {
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    .features-experience__list-info {
+        display: none;
+    }
+
+    .features-experience__list-title {
+        font-size: 12px;
+    }
+
+    .features-experience__detail-wrap {
+        margin-left: 0;
+    }
+
+    .features-experience__detail {
+        top: 20px;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
+    .features-experience__detail-title>p+p {
+        margin-top: 10px;
+    }
+
+    .features-experience__detail-title-headline {
+        font-size: 16px;
+    }
+
+    .features-experience__detail-title-headline>a {
+        top: 2px;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #2b3e41;
+    }
+
+    .features-experience__detail-title-headline>a:before {
+        top: -5px;
+        right: -3px;
+        width: 13px;
+        height: 14px;
+        font-size: 14px;
+    }
+
+    .features-experience__detail-wrap {
+        font-size: 12px;
+    }
+
+    .features-experience__detail>div+div {
+        margin-top: 20px;
+    }
+
+    .features-experience__detail-info {
+        font-size: 13px;
+    }
+
+    .features-experience__technical-list-title {
+        font-size: 12px;
+    }
+
+    .features-experience__technical-list-info {
+        margin-top: 10px;
+    }
+
+    .features-experience__technical-wrap>li+li {
+        margin-top: 15px;
+    }
+
     /* Contact */
     .features-contact .features-common_inner {
         padding: 25px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .logo {
+        display: none;
     }
 }
