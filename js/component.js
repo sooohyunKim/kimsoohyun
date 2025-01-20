@@ -40,6 +40,8 @@
             els.workList = els.workListWrap.querySelectorAll('.features-experience__list');
             els.workListDetailWrap = document.querySelector('.features-experience__detail-wrap');
             els.workListDetail = els.workListDetailWrap.querySelectorAll('.features-experience__detail');
+            els.workPageMoveButtons = document.querySelectorAll('.features-experience__detail-title-headline>a');
+            els.workProjectList = document.querySelectorAll('.features-experience__project-list');
 
             // wheelEvent variable
             els.numPage = els.section.length;
@@ -50,7 +52,10 @@
             els.wheelTimer = '';
 
             // clickable els
-            allClickableArray = [els.arrowPrev, els.arrowNext, els.menuButtons[0], els.menuButtons[1], els.menuButtons[2], els.workList[0], els.workList[1], els.workList[2]];
+            allClickableArray = [els.arrowPrev, els.arrowNext, els.menuButtons[0], els.menuButtons[1], els.menuButtons[2], 
+                                els.workList[0], els.workList[1], els.workList[2], 
+                                els.workPageMoveButtons[0], els.workPageMoveButtons[1],
+                                els.workProjectList[0], els.workProjectList[1], els.workProjectList[2], els.workProjectList[3]];
         };
 
         const bindEvents = function () {
