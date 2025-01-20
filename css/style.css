@@ -713,6 +713,7 @@ body {
     top: 50%;
     left: 50%;
     padding: 50px;
+    min-width: 210px;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -880,6 +881,7 @@ body {
         width: 100%;
     }
 
+    /* Profile */
     .features-profile .features-common_inner {
         width: calc(100% - 50px);
         max-width: 500px;
@@ -937,6 +939,81 @@ body {
         width: 205px;
         height: 220px;
     }
+
+    /* Work Experience */
+    .features-experience__list-wrap {
+        width: auto;
+    }
+
+    .features-experience__list {
+        width: 170px;
+    }
+
+    .features-experience__list:before {
+        width: 15px;
+        height: 15px;
+        right: -59px;
+    }
+
+    .features-experience__list>p+p {
+        margin-top: 10px;
+    }
+
+    .features-experience__list-title {
+        font-size: 14px;
+    }
+
+    .features-experience__list-info {
+        font-size: 12px;
+    }
+
+    .features-experience__detail-wrap {
+        width: 100%;
+        margin-left: 50px;
+        font-size: 14px;
+    }
+
+    .features-experience__detail>div+div {
+        margin-top: 30px;
+    }
+
+    .features-experience__detail-title>p+p {
+        margin-top: 15px;
+    }
+
+    .features-experience__detail-title-headline {
+        font-size: 22px;
+    }
+
+    .features-experience__detail-info {
+        font-size: 15px;
+    }
+
+    .features-experience__technical-wrap {
+        margin-top: 15px;
+    }
+
+    .features-experience__technical-list-title {
+        font-size: 15px;
+    }
+
+    .features-experience__technical-list-info {
+        margin-top: 12px;
+    }
+
+    /* Contact */
+    .features-contact__detail-headline {
+        font-size: 30px;
+    }
+
+    .features-contact__detail-item {
+        font-size: 18px;
+    }
+
+    .features-contact__detail-item:before {
+        top: 32px;
+        height: 3px;
+    }
 }
 
 @media screen and (max-width:440px) {
@@ -991,5 +1068,10 @@ body {
 
     .features-profile__info .tag_list .tag {
         font-size: 11px;
+    }
+
+    /* Contact */
+    .features-contact .features-common_inner {
+        padding: 25px;
     }
 }
