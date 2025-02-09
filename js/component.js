@@ -136,8 +136,12 @@
 
                 if (n == els.numPage) {
                     els.scroll.style.opacity = 0;
+                    els.scroll.setAttribute('aria-hidden', true);
+                    els.scroll.setAttribute('tabindex', -1);
                 } else {
                     els.scroll.style.opacity = 1;
+                    els.scroll.removeAttribute('aria-hidden', true);
+                    els.scroll.removeAttribute('tabindex', -1);
                 }
 
                 els.sectionWrap.style.top = -((n - 1) * 100) + '%';
@@ -148,6 +152,15 @@
 
                 els.menuButtons[n-1].parentElement.querySelector('.on').classList.remove('on');
                 els.menuButtons[n-1].classList.add('on');
+
+                // Accessibility
+                els.menuButtons[n-1].setAttribute('aria-selected', true);
+                els.menuButtons[els.pagePrev-1].setAttribute('aria-selected', false);
+
+                els.section[n-1].removeAttribute('aria-hidden');
+                els.section[n-1].removeAttribute('tabindex');
+                els.section[els.pagePrev-1].setAttribute('aria-hidden', true);
+                els.section[els.pagePrev-1].setAttribute('tabindex', -1);
             },
             setHeight: function () {
                 let windowHeight = window.innerHeight;
@@ -177,6 +190,19 @@
                 this.classList.add('on');
                 els.workListDetailWrap.querySelector('.on').classList.remove('on');
                 els.workListDetail[this.index].classList.add('on');
+
+                // Accessibility
+                for (let i = 0; i < els.workList.length; i++) {
+                    if (i == this.index) {
+                        this.setAttribute('aria-selected', true);
+                        els.workListDetail[i].removeAttribute('aria-hidden');
+                        els.workListDetail[i].removeAttribute('tabindex');
+                    } else {
+                        els.workList[i].setAttribute('aria-selected', false);
+                        els.workListDetail[i].setAttribute('aria-hidden', true);
+                        els.workListDetail[i].setAttribute('tabindex', -1);
+                    }
+                }
             }
         };
 

@@ -30,17 +30,17 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <ul class="menu_bx">
-                <li class="menu on" data-tab="profile">Profile</li>
-                <li class="menu" data-tab="work_experience">Work Experience</li>
-                <li class="menu" data-tab="contact">Contact</li>
+            <ul class="menu_bx" role="tablist">
+                <li class="menu on" data-tab="profile" id="profile" role="tab" aria-selected="true">Profile</li>
+                <li class="menu" data-tab="work_experience" id="work_experience" role="tab" aria-selected="false">Work Experience</li>
+                <li class="menu" data-tab="contact" role="tab" id="contact" aria-selected="false">Contact</li>
             </ul>
         </div>
 
         <!-- Nav -->
         <nav class="arrow">
-            <button type="button" class="prev"></button>
-            <button type="button" class="next"></button>
+            <button type="button" class="prev" title="prev arrow button"></button>
+            <button type="button" class="next" title="next arrow button"></button>
         </nav>
 
         <!-- Background Point -->
@@ -49,7 +49,7 @@
         <!-- Contents -->
         <div id="contents" class="features">
             <!-- 1. Profile -->
-            <div class="feature features-profile">
+            <div class="feature features-profile" role="tabpanel" aria-labelledby="profile">
                 <div class="features-common_inner">
                     <div class="features-profile__info">
                         <div class="t_txt">
@@ -79,24 +79,24 @@
                 </div>
             </div>
             <!-- 2. Work Experience -->
-            <div class="feature features-experience">
+            <div class="feature features-experience" role="tabpanel" aria-labelledby="work_experience" aria-hidden="true" tabindex="-1">
                 <div class="features-common_inner">
-                    <ul class="features-experience__list-wrap">
-                        <li class="features-experience__list on">
+                    <ul class="features-experience__list-wrap" role="tablist">
+                        <li class="features-experience__list on" role="tab" id="experience-1" aria-selected="true">
                             <p class="features-experience__list-title">(주)우남앤파트너스</p>
                             <p class="features-experience__list-info">사원 | 2019.01.22 - 2020.01.21</p>
                         </li>
-                        <li class="features-experience__list">
+                        <li class="features-experience__list" role="tab" id="experience-2" aria-selected="false">
                             <p class="features-experience__list-title">노버스메이</p>
                             <p class="features-experience__list-info">사원 | 2020.04.16 - 2022.05.31</p>
                         </li>
-                        <li class="features-experience__list">
+                        <li class="features-experience__list" role="tab" id="experience-3" aria-selected="false">
                             <p class="features-experience__list-title">(주)하이브랩</p>
                             <p class="features-experience__list-info">전임 | 2022.07.25 - 2024.10.10</p>
                         </li>
                     </ul>
-                    <ul class="features-experience__detail-wrap">
-                        <li class="features-experience__detail on">
+                    <div class="features-experience__detail-wrap">
+                        <div class="features-experience__detail on" role="tabpanel" aria-labelledby="experience-1">
                             <div class="features-experience__detail-title">
                                 <p class="features-experience__detail-title-headline">(주)우남앤파트너스</p>
                                 <p class="features-experience__detail-title-sub">사원 | 2019.01.22 - 2020.01.21</p>
@@ -117,8 +117,8 @@
                                     <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / JQUERY / SPRING / SQL / JAVA</p>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="features-experience__detail">
+                        </div>
+                        <div class="features-experience__detail" role="tabpanel" aria-labelledby="experience-2" aria-hidden="true" tabindex="-1">
                             <div class="features-experience__detail-title">
                                 <p class="features-experience__detail-title-headline"><span>노버스메이</span><a href="https://novusmay.com/home.html" target="_blank"></a></p>
                                 <p class="features-experience__detail-title-sub">사원 | 2020.04.16 - 2022.05.31</p>
@@ -138,8 +138,8 @@
                                     <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / JQUERY</p>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="features-experience__detail">
+                        </div>
+                        <div class="features-experience__detail" role="tabpanel" aria-labelledby="experience-3" aria-hidden="true" tabindex="-1">
                             <div class="features-experience__detail-title">
                                 <p class="features-experience__detail-title-headline"><span>(주)하이브랩</span><a href="https://hivelab.co.kr/" target="_blank"></a></p>
                                 <p class="features-experience__detail-title-sub">전임 | 2022.07.25 - 2024.10.10</p>
@@ -167,12 +167,12 @@
                                     <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / Node.js</p>
                                 </li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- 3. Contact -->
-            <div class="feature features-contact">
+            <div class="feature features-contact" role="tabpanel" aria-labelledby="contact" aria-hidden="true" tabindex="-1">
                 <div class="features-common_inner">
                     <div class="features-contact__detail">
                         <p class="features-contact__detail-headline">CONTACT ME.</p>
