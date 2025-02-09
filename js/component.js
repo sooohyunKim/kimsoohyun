@@ -5,6 +5,7 @@
     window.portfolio.motion = function () {
         let els = {};
         let isWheelBlocked = false;
+        let isLoadEnd = false;
 
         const init = function () {
             setElements();
@@ -88,6 +89,7 @@
                     els.section[i].style.top = (i * 100) + '%';
                 }
                 eventList.showPage(1);
+                isLoadEnd = true;
             },
             scroll: function (e) {
                 // wheelEvent
@@ -154,13 +156,19 @@
                 els.menuButtons[n-1].classList.add('on');
 
                 // Accessibility
-                els.menuButtons[n-1].setAttribute('aria-selected', true);
-                els.menuButtons[els.pagePrev-1].setAttribute('aria-selected', false);
-
-                els.section[n-1].removeAttribute('aria-hidden');
-                els.section[n-1].removeAttribute('tabindex');
-                els.section[els.pagePrev-1].setAttribute('aria-hidden', true);
-                els.section[els.pagePrev-1].setAttribute('tabindex', -1);
+                if (!!isLoadEnd) {
+                    for (let i = 0; i < els.menuButtons.length; i++) {
+                        if (i == (n-1)) {
+                            els.menuButtons[n-1].setAttribute('aria-selected', true);
+                            els.section[n-1].removeAttribute('aria-hidden');
+                            els.section[n-1].removeAttribute('tabindex');
+                        } else {
+                            els.menuButtons[i].setAttribute('aria-selected', false);
+                            els.section[i].setAttribute('aria-hidden', true);
+                            els.section[i].setAttribute('tabindex', -1);
+                        }
+                    }
+                }  
             },
             setHeight: function () {
                 let windowHeight = window.innerHeight;
