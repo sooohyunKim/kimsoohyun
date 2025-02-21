@@ -6,6 +6,7 @@
         let els = {};
         let isWheelBlocked = false;
         let isLoadEnd = false;
+        let allClickableArray = [];
 
         const init = function () {
             setElements();
