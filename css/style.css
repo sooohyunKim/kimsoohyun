@@ -508,6 +508,25 @@ body {
     -webkit-transform: translate(-50%, -50%);
 }
 
+.features-experience .features-common_inner::-webkit-scrollbar {
+    height: 10px;
+}
+
+.features-experience .features-common_inner::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.features-experience .features-common_inner::-webkit-scrollbar-thumb {
+    background-color: #eee7da;
+    border-radius: 10px;
+}
+
+.features-experience .features-common_inner::-webkit-scrollbar-button {
+    display: none;
+}
+
+
 .features-experience__list-wrap {
     display: flex;
     flex-direction: row;
