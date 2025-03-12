@@ -1,0 +1,185 @@
+/* 2022 SOOHYUN PORTFOLIO SUB */
+
+body {
+    position: relative;
+    width: 100%;
+    background-color: #2b3e41;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+    font-weight: 300;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.container .cnt {
+    width: 900px;
+    margin: 50px auto 0;
+    padding-bottom: 50px;
+}
+
+.container .cnt .tit {
+    position: relative;
+    padding-left: 10px;
+    color: #eee7da;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.container .cnt .tit:before {
+    position: absolute;
+    top: 2px;
+    left: -8px;
+    width: 4px;
+    height: 100%;
+    background-color: #fcce77;
+    border-radius: 4px;
+    content: "";
+}
+
+.container .cnt .tit .i_move {
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fcce77;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.container .cnt .tit .i_move:before {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 16px;
+    height: 18px;
+    background-color: #2b3e41;
+    color: #fcce77;
+    font-size: 18px;
+    content: "↗";
+}
+
+.container .cnt>div+div {
+    margin-top: 50px;
+}
+
+.container .cnt .tit+ul {
+    margin-top: 50px;
+}
+
+.container .web_bx {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container .web_bx .img_bx {
+    width: 100%;
+}
+
+.container .web_bx .img_bx .img {
+    width: 100%;
+}
+
+.container .web_bx .img_bx .img+.img {
+    margin-top: 50px;
+}
+
+.container .web_bx .img_bx .img>img {
+    width: 100%;
+    height: auto;
+}
+
+
+.container .mob_bx {
+    width: 100%;
+}
+
+.container .mob_bx .img_bx {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.container .mob_bx .img_bx .img {
+    width: 100%
+}
+
+.container .mob_bx .img_bx .img+.img {
+    margin-top: 50px;
+}
+
+.container .mob_bx .img_bx .img>img {
+    width: 100%;
+    height: auto;
+}
+
+.container .tv_bx {
+    width: 100%;
+}
+
+.container .tv_bx .img_bx {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.container .tv_bx .img_bx .img {
+    width: 100%
+}
+
+.container .tv_bx .img_bx .img>img {
+    width: 100%;
+    height: auto;
+}
+
+.container .agent_bx {
+    width: 100%;
+}
+
+.container .agent_bx .img_bx {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.container .agent_bx .img_bx .img {
+    width: 100%
+}
+
+.container .agent_bx .img_bx .img+.img {
+    margin-top: 50px;
+}
+
+.container .agent_bx .img_bx .img>img {
+    width: 100%;
+    height: auto;
+}
+
+@media(max-width:1366px) {
+    .container .cnt {
+        width: calc(100% - 100px);
+        padding: 50px;
+    }
+}
+
+@media(max-width:768px) {
+    .container .cnt {
+        width: calc(100% - 50px);
+        padding: 25px;
+    }
+
+    .container .mob_bx .img_bx {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container .tv_bx .img_bx {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .container .agent_bx .img_bx {
+        width: 300px;
+        margin: 0 auto;
+    }
+}

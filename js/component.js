@@ -6,7 +6,6 @@
         let els = {};
         let isWheelBlocked = false;
         let isLoadEnd = false;
-        let allClickableArray = [];
 
         const init = function () {
             setElements();
@@ -14,9 +13,6 @@
         };
 
         const setElements = function () {
-            // cursor
-            els.cursor = document.querySelector('.cursor');
-
             // container
             els.container = document.querySelector('.container');
 
@@ -40,10 +36,16 @@
             // workList
             els.workListWrap = document.querySelector('.features-experience__list-wrap');
             els.workList = els.workListWrap.querySelectorAll('.features-experience__list');
-            els.workListDetailWrap = document.querySelector('.features-experience__detail-wrap');
-            els.workListDetail = els.workListDetailWrap.querySelectorAll('.features-experience__detail');
-            els.workPageMoveButtons = document.querySelectorAll('.features-experience__detail-title-headline>a');
-            els.workProjectList = document.querySelectorAll('.features-experience__project-list');
+
+            els.projectSection = document.querySelector('.features-project');
+
+            // projectList
+            els.projectListWrap = document.querySelector('.features-project__list-wrap');
+            els.projectList = els.projectListWrap.querySelectorAll('.features-project__list');
+
+            // projectView
+            els.projectViewWrap = document.querySelector('.features-project__view-wrap');
+            els.projectView = els.projectViewWrap.querySelectorAll('.features-project__view');
 
             // wheelEvent variable
             els.numPage = els.section.length;
@@ -52,39 +54,18 @@
             els.pageNext = 0;
             els.wheelDirection = 0;
             els.wheelTimer = '';
-
-            // clickable els
-            allClickableArray = [els.arrowPrev, els.arrowNext, els.menuButtons[0], els.menuButtons[1], els.menuButtons[2], 
-                                els.workList[0], els.workList[1], els.workList[2], 
-                                els.workPageMoveButtons[0], els.workPageMoveButtons[1],
-                                els.workProjectList[0], els.workProjectList[1], els.workProjectList[2], els.workProjectList[3]];
         };
 
         const bindEvents = function () {
             eventHandler.load();
             eventHandler.resize();
             eventHandler.scroll();
-            eventHandler.mouseMove();
-            eventHandler.mouseOver();
-            eventHandler.mouseLeave();
             eventHandler.arrowClick();
             eventHandler.menuClick();
-            eventHandler.workListClick();
+            eventHandler.projectListClick();
         };
 
         const eventList = {
-            mouseMove: function (e) {
-                let x = e.clientX;
-                let y = e.clientY;
-                els.cursor.style.left =  x + 'px';
-                els.cursor.style.top = y + 'px';
-            },
-            mouseOver: function () {
-                els.cursor.classList.add('active');
-            },
-            mouseLeave: function () {
-                els.cursor.classList.remove('active');
-            },
             setPage: function () {
                 for (let i = 0; i < els.numPage; i++) {
                     els.section[i].style.top = (i * 100) + '%';
@@ -129,10 +110,12 @@
                     els.sectionWrap.style.transition = 'top 0.7s ease-in-out';
                 }
 
-                if (n == 1 || n == 2) {
+                if (n == 1) {
+                    els.container.classList.add('dark');
                     if (!els.bg.classList.contains('bg_show')) els.bg.classList.add('bg_show');
                     if (els.bg.classList.contains('bg_hide')) els.bg.classList.remove('bg_hide');
                 } else {
+                    els.container.classList.remove('dark');
                     els.bg.classList.remove('bg_show');
                     els.bg.classList.add('bg_hide');
                 }
@@ -194,24 +177,16 @@
             menuClick: function () {
                 eventList.showPage(this.index);
             },
-            workListClick: function () {
-                els.workListWrap.querySelector('.on').classList.remove('on');
-                this.classList.add('on');
-                els.workListDetailWrap.querySelector('.on').classList.remove('on');
-                els.workListDetail[this.index].classList.add('on');
-
-                // Accessibility
-                for (let i = 0; i < els.workList.length; i++) {
-                    if (i == this.index) {
-                        this.setAttribute('aria-selected', true);
-                        els.workListDetail[i].removeAttribute('aria-hidden');
-                        els.workListDetail[i].removeAttribute('tabindex');
-                    } else {
-                        els.workList[i].setAttribute('aria-selected', false);
-                        els.workListDetail[i].setAttribute('aria-hidden', true);
-                        els.workListDetail[i].setAttribute('tabindex', -1);
-                    }
+            projectListClick: function () {
+                let isSectionRight = els.projectSection.classList.contains('right'); 
+                if (!isSectionRight) {
+                    els.projectSection.classList.add('right');
                 }
+
+                if (els.projectListWrap.querySelector('.on')) els.projectListWrap.querySelector('.on').classList.remove('on');
+                if (els.projectViewWrap.querySelector('.on')) els.projectViewWrap.querySelector('.on').classList.remove('on');
+                els.projectList[this.index].classList.add('on');
+                els.projectView[this.index].classList.add('on');
             }
         };
 
@@ -222,19 +197,6 @@
                     eventList.setHeight();
                     els.container.classList.add('on');
                 });
-            },
-            mouseMove: function () {
-                window.addEventListener('mousemove', eventList.mouseMove);
-            },
-            mouseOver: function () {
-                for (let i = 0; i < allClickableArray.length; i++) {
-                    allClickableArray[i].addEventListener('mouseover', eventList.mouseOver);
-                }
-            },
-            mouseLeave: function () {
-                for (let i = 0; i < allClickableArray.length; i++) {
-                    allClickableArray[i].addEventListener('mouseleave', eventList.mouseLeave);
-                }
             },
             scroll: function () {
                 window.addEventListener('wheel', eventList.scroll);
@@ -252,10 +214,10 @@
                     els.menuButtons[i].addEventListener('click', eventList.menuClick);
                 }
             },
-            workListClick: function () {
-                for (let i = 0; i < els.workList.length; i++) {
-                    els.workList[i].index = i;
-                    els.workList[i].addEventListener('click', eventList.workListClick);
+            projectListClick: function () {
+                for (let i = 0; i < els.projectList.length; i++) {
+                    els.projectList[i].index = i;
+                    els.projectList[i].addEventListener('click', eventList.projectListClick);
                 }
             }
         };

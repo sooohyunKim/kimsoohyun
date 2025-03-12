@@ -32,7 +32,9 @@
         <div class="header">
             <ul class="menu_bx" role="tablist">
                 <li class="menu on" data-tab="profile" id="profile" role="tab" aria-selected="true">Profile</li>
-                <li class="menu" data-tab="work_experience" id="work_experience" role="tab" aria-selected="false">Work Experience</li>
+                <li class="menu" data-tab="work_experience" id="work_experience" role="tab" aria-selected="false">Work
+                    Experience</li>
+                <li class="menu" data-tab="project" id="project" role="tab" aria-selected="false">Project</li>
                 <li class="menu" data-tab="contact" role="tab" id="contact" aria-selected="false">Contact</li>
             </ul>
         </div>
@@ -44,7 +46,7 @@
         </nav>
 
         <!-- Background Point -->
-        <div class="bg-point bg_hide"></div>
+        <div class="bg-point bg_show"></div>
 
         <!-- Contents -->
         <div id="contents" class="features">
@@ -75,104 +77,477 @@
                     </div>
                     <div class="features-profile__img">
                         <img src="./img/features-profile-test.jpg" alt="kimsoohyun profile image">
-                    </div>  
-                </div>
-            </div>
-            <!-- 2. Work Experience -->
-            <div class="feature features-experience" role="tabpanel" aria-labelledby="work_experience" aria-hidden="true" tabindex="-1">
-                <div class="features-common_inner">
-                    <ul class="features-experience__list-wrap" role="tablist">
-                        <li class="features-experience__list on" role="tab" id="experience-1" aria-selected="true">
-                            <p class="features-experience__list-title">(주)우남앤파트너스</p>
-                            <p class="features-experience__list-info">사원 | 2019.01.22 - 2020.01.21</p>
-                        </li>
-                        <li class="features-experience__list" role="tab" id="experience-2" aria-selected="false">
-                            <p class="features-experience__list-title">노버스메이</p>
-                            <p class="features-experience__list-info">사원 | 2020.04.16 - 2022.05.31</p>
-                        </li>
-                        <li class="features-experience__list" role="tab" id="experience-3" aria-selected="false">
-                            <p class="features-experience__list-title">(주)하이브랩</p>
-                            <p class="features-experience__list-info">전임 | 2022.07.25 - 2024.10.10</p>
-                        </li>
-                    </ul>
-                    <div class="features-experience__detail-wrap">
-                        <div class="features-experience__detail on" role="tabpanel" aria-labelledby="experience-1">
-                            <div class="features-experience__detail-title">
-                                <p class="features-experience__detail-title-headline">(주)우남앤파트너스</p>
-                                <p class="features-experience__detail-title-sub">사원 | 2019.01.22 - 2020.01.21</p>
-                            </div>
-                            <div class="features-experience__detail-info">
-                                <p>홈쇼핑 채널 다시보기 서비스를 제공하는 회사입니다.</p>
-                                <p>웹페이지, TV UI에 관한 경험과 프론트엔드 지식을 쌓을 수 있었습니다.</p>
-                            </div>
-                            <ul class="features-experience__technical-wrap">
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">담당 업무</p>
-                                    <p class="features-experience__technical-list-info">이벤트성 웹페이지 퍼블리싱</p>
-                                    <P class="features-experience__technical-list-info">회원 DB 관리</p>
-                                    <p class="features-experience__technical-list-info">TV UI 퍼블리싱 및 프론트엔드 작업</p>
-                                </li>
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">사용 언어</p>
-                                    <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / JQUERY / SPRING / SQL / JAVA</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="features-experience__detail" role="tabpanel" aria-labelledby="experience-2" aria-hidden="true" tabindex="-1">
-                            <div class="features-experience__detail-title">
-                                <p class="features-experience__detail-title-headline"><span>노버스메이</span><a href="https://www.novusmay.com/" target="_blank"></a></p>
-                                <p class="features-experience__detail-title-sub">사원 | 2020.04.16 - 2022.05.31</p>
-                            </div>
-                            <div class="features-experience__detail-info">
-                                <p>사내 근무관리, 자산관리 솔루션을 제공하는 회사입니다.</p>
-                                <p>각 디바이스별 반응형 작업 경험을 쌓고 다양한 구축사의 커스텀 작업을 진행했습니다.</p>
-                            </div>
-                            <ul class="features-experience__technical-wrap">
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">담당 업무</p>
-                                    <p class="features-experience__technical-list-info">반응형 웹페이지 퍼블리싱 작업</p>
-                                    <p class="features-experience__technical-list-info">각 솔루션 별 웹/에이전트/모바일 퍼블리싱 작업</p>
-                                </li>
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">사용 언어</p>
-                                    <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / JQUERY</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="features-experience__detail" role="tabpanel" aria-labelledby="experience-3" aria-hidden="true" tabindex="-1">
-                            <div class="features-experience__detail-title">
-                                <p class="features-experience__detail-title-headline"><span>(주)하이브랩</span><a href="https://hivelab.co.kr/" target="_blank"></a></p>
-                                <p class="features-experience__detail-title-sub">전임 | 2022.07.25 - 2024.10.10</p>
-                            </div>
-                            <div class="features-experience__detail-info">
-                                <p>웹 에이전시 회사 입니다.</p>
-                                <p>삼성 글로벌 무선 언팩 프로젝트 및 글로벌 사이트 운영 업무를 진행했습니다.</p>
-                                <p>80여개 국가 환경에 대한 경험을 익힐 수 있었으며, 인터랙션 작업과 웹 접근성 관련 작업을 통해 다양한 경험을 쌓을 수 있었습니다.</p>
-                            </div>
-                            <ul class="features-experience__technical-wrap">
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">담당 업무</p>
-                                    <p class="features-experience__technical-list-info">삼성 글로벌 사이트 무선 언팩 프로젝트</p>
-                                    <ul class="features-experience__project-wrap">
-                                        <li class="features-experience__project-list">- Galaxy S23 시리즈</li>
-                                        <li class="features-experience__project-list"><a href="https://www.samsung.com/uk/smartphones/galaxy-z-flip5/" target="_blank">- Galaxy Z5 시리즈</a></li>
-                                        <li class="features-experience__project-list"><a href="https://www.samsung.com/uk/smartphones/galaxy-s24/" target="_blank">- Galaxy S24 시리즈</a></li>
-                                        <li class="features-experience__project-list"><a href="https://www.samsung.com/uk/smartphones/galaxy-z-flip6/" target="_blank">- Galaxy Z6 시리즈</a></li>
-                                    </ul>
-                                    <p class="features-experience__technical-list-info">삼성 글로벌 사이트 운영 업무</p>
-                                    <p class="features-experience__technical-list-info">작업 빌드 환경 개선</p>
-                                </li>
-                                <li class="features-experience__technical-list">
-                                    <p class="features-experience__technical-list-title">사용 언어</p>
-                                    <p class="features-experience__technical-list-info">HTML / CSS / JAVASCRIPT / Node.js</p>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- 3. Contact -->
-            <div class="feature features-contact" role="tabpanel" aria-labelledby="contact" aria-hidden="true" tabindex="-1">
+            <!-- 2. Work Experience -->
+            <div class="feature features-experience" role="tabpanel" aria-labelledby="work_experience"
+                aria-hidden="true" tabindex="-1">
+                <div class="features-common_inner">
+                    <ul class="features-experience__list-wrap">
+                        <li class="features-experience__list on">
+                            <div class="features-experience__list-title">(주)우남앤파트너스</div>
+                            <div class="features-experience__list-info">
+                                <span class="date">사원 | 2019.01.22 - 2020.01.21</span>
+                                <div class="discription">
+                                    <p>홈쇼핑 채널 다시 보기 서비스를 제공하는 회사입니다. 웹페이지, TV UI에 관한 경험과 다양한 프론트엔드 지식을 쌓을 수 있었습니다.</p>
+                                    <div class="work-wrap">
+                                        <p class="work">웹 페이지 UI 퍼블리싱 및 API를 이용한 데이터 연결 작업</p>
+                                        <p class="work">TV UI 퍼블리싱 작업</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="features-experience__list">
+                            <div class="features-experience__list-title">
+                                <span>노버스메이</span>
+                                <a href="https://novusmay.com/" target="_blank"
+                                    class="features-experience__title-move"></a>
+                            </div>
+                            <div class="features-experience__list-info">
+                                <div class="date">사원 | 2020.04.16 - 2022.05.31</div>
+                                <div class="discription">
+                                    <p>사내 근무관리, 자산관리 솔루션을 제공하는 회사입니다. 각 디바이스별 반응형 작업 경험을 쌓고 다양한 구축사의 커스텀 작업을 진행했습니다.</p>
+                                    <div class="work-wrap">
+                                        <p class="work">PC/태블릿/모바일 반응형 웹 페이지 퍼블리싱 작업</p>
+                                        <p class="work">각 솔루션 별 PC/태블릿/모바일/에이전트 반응형 퍼블리싱 작업</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="features-experience__list">
+                            <div class="features-experience__list-title">
+                                <span>하이브랩</span>
+                                <a href="https://hivelab.co.kr/" target="_blank"
+                                    class="features-experience__title-move"></a>
+                            </div>
+                            <div class="features-experience__list-info">
+                                <div class="date">전임 | 2022.07.25 - 2024.10.10</div>
+                                <div class="discription">
+                                    <p>다양한 프로젝트를 진행하는 에이전시 회사입니다. 그 중 메인 프로젝트인 삼성 글로벌 UNPACK 프로젝트 및 운영 업무를 맡았습니다.</p>
+                                    <div class="work-wrap">
+                                        <p class="work">스크롤 기반 인터랙션 구현 및 성능 최적화</p>
+                                        <p class="work">웹 접근성 관련 작업, 기존 업무 프로세스 개선 작업</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 3. Project -->
+            <div class="feature features-project" role="tabpanel" aria-labelledby="project" aria-hidden="true"
+                tabindex="-1">
+                <div class="features-common_inner">
+                    <ul class="features-project__view-wrap">
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>홈쇼픽</span>
+                                    <a href="./sub/hspick.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2019.02 ~ 2019.09</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY<br>JAVA / SPRING / SQL</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">TV UI 퍼블리싱</li>
+                                            <li class="features-project__work-list">리모콘 동작에 따른 인터랙션 작업</li>
+                                            <li class="features-project__work-list">홈페이지 UI 퍼블리싱</li>
+                                            <li class="features-project__work-list">AJAX를 통한 데이터 연결</li>
+                                            <li class="features-project__work-list">이벤트 페이지 작업</li>
+                                            <li class="features-project__work-list">고객 DB 관리</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>세이프로</span>
+                                    <a href="./sub/safe-pro.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2020.05.13 ~ 2020.05.20</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">홈페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/노트북/태블릿/모바일 반응형 작업</li>
+                                            <li class="features-project__work-list">Chart.js / ScrollMagic / TweenMax 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>샘큐(구) 홈페이지</span>
+                                    <a href="./sub/samq-homepage_ver1.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2020.05.22 ~ 2020.06.03</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">홈페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/노트북/태블릿/모바일 반응형 작업</li>
+                                            <li class="features-project__work-list">ScrollMagic / TweenMax 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>타임키퍼 솔루션 리뉴얼</span>
+                                    <a href="./sub/timekeeper.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2020.08 ~ 2020.09</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">50%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">솔루션 웹페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/에이전트/모바일 반응형 작업</li>
+                                            <li class="features-project__work-list">Chart.js / Slick / Summernote 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>타임키퍼 홈페이지</span>
+                                    <a href="./sub/timekeeper-homepage.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2020.11.26 ~ 2020.12.04</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">홈페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/노트북/태블릿/모바일 반응형 작업</li>
+                                            <li class="features-project__work-list">ScrollMagic / TweenMax 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>한화기계 솔루션</span>
+                                    <a href="./sub/hanhwa.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2021.02 ~ 2021.09</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">50%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">솔루션 웹페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/모바일 작업</li>
+                                            <li class="features-project__work-list">GoogleChart / Summernote 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>샘큐 솔루션</span>
+                                    <a href="./sub/samq.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2021.04 ~ 2022.01</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">솔루션 웹페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/에이전트/모바일 작업</li>
+                                            <li class="features-project__work-list">Chart.js/ Slick / Summernote 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>샘큐 홈페이지 (리뉴얼)</span>
+                                    <a href="./sub/samq_homepage_ver2.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2021.08.12 ~ 2021.08.17</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">100%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT / JQUERY</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">홈페이지 퍼블리싱</li>
+                                            <li class="features-project__work-list">웹/노트북/태블릿/모바일 반응형 작업</li>
+                                            <li class="features-project__work-list">Slick / ScrollMagic / TweenMax 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>Galaxy S23</span>
+                                    <a href="./sub/galaxy-s23.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2022.11.28 ~ 2023.02.22</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">Script 50%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">메인 페이지 공통 인터랙션 및 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">악세사리 페이지 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">Swiper 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>Galaxy Z5</span>
+                                    <a href="./sub/galaxy-z5.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2023.05.15 ~ 2023.07.26</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">SCRIPT 70%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">메인 페이지 공통 인터랙션 및 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">악세사리 페이지 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">전국가 대응 티징 페이지 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">Swiper 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>Galaxy S24</span>
+                                    <a href="./sub/galaxy-s24.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2023.11.13 ~ 2024.01.18</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">SCRIPT 60%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">메인 페이지 공통 인터랙션 및 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">악세사리 페이지 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">Swiper 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="features-project__view">
+                            <div class="features-project__view-item">
+                                <div class="features-project__item-title">
+                                    <span>Galaxy Z6</span>
+                                    <a href="./sub/galaxy-z6.html" target="_blank"></a>
+                                </div>
+                                <ul class="features-project__item-info-wrap">
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기간</p>
+                                        <p class="features-project__item-info-text">2024.04.22 ~ 2024.07.10</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">기여도</p>
+                                        <p class="features-project__item-info-text">SCRIPT 70%</p>
+                                    </li>
+                                    <li class="features-project__item-info">
+                                        <p class="features-project__item-info-title">사용</p>
+                                        <p class="features-project__item-info-text">HTML / CSS / JAVASCRIPT</p>
+                                    </li>
+                                    <li class="features-project__work-list-box">
+                                        <div class="features-project__work-list-title">작업 내용</div>
+                                        <ul class="features-project__work-list-wrap">
+                                            <li class="features-project__work-list">메인 페이지 공통 인터랙션 및 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">악세사리 페이지 SCRIPT 작업</li>
+                                            <li class="features-project__work-list">Swiper 플러그인 사용</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="features-project__list-wrap">
+                        <li class="features-project__list">
+                            <p>홈쇼픽</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>세이프로 홈페이지</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>샘큐(구) 홈페이지</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>타임키퍼 리뉴얼</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>타임키퍼 홈페이지</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>한화기계</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>샘큐 리뉴얼</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>샘큐 홈페이지</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>Galaxy S23</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>Galaxy Z5</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>Galaxy S24</p>
+                        </li>
+                        <li class="features-project__list">
+                            <p>Galaxy Z6</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 4. Contact -->
+            <div class="feature features-contact" role="tabpanel" aria-labelledby="contact" aria-hidden="true"
+                tabindex="-1">
                 <div class="features-common_inner">
                     <div class="features-contact__detail">
                         <p class="features-contact__detail-headline">CONTACT ME.</p>
@@ -197,10 +572,6 @@
         <div class="scroll">
             <div class="dot"></div>
         </div>
-    </div>
-
-    <div class="cursor">
-        <div class="ring"></div>
     </div>
 
     <!-- Script -->
